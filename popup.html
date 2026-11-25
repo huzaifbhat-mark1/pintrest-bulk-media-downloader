@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinterest Bulk Downloader</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>Pinterest Bulk Downloader</h1>
+      <p id="status" class="status">Scanning current tab...</p>
+    </div>
+    <div class="header-actions">
+      <button id="scrollToggleBtn" class="scroll-btn">Auto-Scroll</button>
+      <button id="refreshBtn" class="icon-btn" title="Rescan current page">↻</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <label class="select-all">
+      <input type="checkbox" id="selectAll" checked />
+      <span>Select All</span>
+    </label>
+    <span id="countBadge" class="badge">0 images</span>
+  </div>
+
+  <main id="pinGrid" class="pin-grid"></main>
+
+  <footer class="footer">
+    <button id="downloadSelectedBtn" class="primary-btn" disabled>
+      Download Selected (0)
+    </button>
+    <p class="hint">Saves full-resolution images to Downloads\pinterest_images\</p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
